@@ -4,35 +4,68 @@
     <title>Blank New Tab</title>
     <style>
       /* body {
-        background-image: url("./background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      } */
+              background-image: url("./background.jpg");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            } */
+      body {
+        box-sizing: border-box;
+      }
       .grid-container {
         display: inline-grid;
         grid-template-columns: auto auto auto auto auto auto;
-        padding: 40px;
-        text-align: center;
-        margin-left: 100px;
-        margin-right: 100px;
+        grid-gap: 80px;
+        /* box-sizing: border-box; */
       }
+
       .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
       }
       img {
-        width: 225px;
-        height: 225px;
+        width: 150px;
+        height: 150px;
+      }
+      .search_input {
+        padding: 1rem;
+        margin: auto;
+        display: block;
+        width: 500px;
+        margin-bottom: 20px;
+        text-align: right;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+        border-radius: 5px;
+      }
+      .button {
+        padding: 0.5rem;
+        margin: auto;
+        display: block;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        width: 100px;
+        --tw-bg-opacity: 1;
+        background-color: rgb(61 81 143 / var(--tw-bg-opacity));
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+      }
+      .div_content {
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
     <div class="grid-container">
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://www.varzesh3.com/" target="_blank"
             ><img src="./image/varzesh 3.jpg" alt="varzesh3"
           /></a>
@@ -40,7 +73,7 @@
         </div>
       </div>
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://www.aparat.com/" target="_blank"
             ><img src="./image/aparat_logo.png" alt="aparat"
           /></a>
@@ -48,7 +81,7 @@
         </div>
       </div>
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://www.digikala.com/" target="_blank"
             ><img src="./image/digikala_logo.png" alt="digikala"
           /></a>
@@ -56,7 +89,7 @@
         </div>
       </div>
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://snapp.ir/" target="_blank"
             ><img src="./image/snapp_logo.png" alt="snapp"
           /></a>
@@ -64,23 +97,15 @@
         </div>
       </div>
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://flowto.ir/"
-            ><img
-              src="./image/flowto_logo.jpg"
-              alt="flowto"
-              style="
-                width: 180px;
-                height: 180px;
-                margin-bottom: 35px;
-                margin-top: 10px;
-              "
+            ><img src="./image/flowto_logo.jpg" alt="flowto"
           /></a>
           <div><p>فلوتو</p></div>
         </div>
       </div>
       <div class="grid-item">
-        <div>
+        <div class="div_content">
           <a href="https://github.com/" target="_blank"
             ><img src="./image/github.jpg" alt="github"
           /></a>
@@ -88,5 +113,26 @@
         </div>
       </div>
     </div>
+    <form
+      action="https://www.google.com/search"
+      class="searchform"
+      method="get"
+      name="searchform"
+      target="_blank"
+    >
+      <div>
+        <input name="sitesearch" type="hidden" value="" />
+        <input
+          class="search_input"
+          autocomplete="on"
+          class="form-control search"
+          name="q"
+          placeholder="جست و جو در گوگل"
+          required="required"
+          type="text"
+        />
+        <button class="button" type="submit">جستجو</button>
+      </div>
+    </form>
   </body>
 </html>

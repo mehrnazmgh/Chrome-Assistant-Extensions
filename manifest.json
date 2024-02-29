@@ -8,7 +8,7 @@
     "newtab": "blank.html"
   },
   "action": {
-    "default_popup": "blank.html",
+    "default_popup": "",
     "default_icon": "assistant_logo.png"
   }
 }
